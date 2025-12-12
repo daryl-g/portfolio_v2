@@ -70,8 +70,13 @@ Probably any Cyberpunk-themed or Tokyo Night-themed website I can find.
 
 ---
 
+## LLM usage:
+
+- I do use Claude to help me plan out the steps needed to achieve the ideas above and get through the first attempts at building a component and page. I'm still in control of the entire idea for my portfolio and won't just sit back and let Claude do everything.
+- This is also a learning process for me as I've never done a project in Svelte before, so Claude acts as a knowledgeable assistant who I can ask stuff that I don't know instead of me spending hours and crawling through a bunch of StackOverflow q&as without finding the actual specific answer that I'm looking for. I'm also using Claude to explain everything so I can understand its thought process and add my own touches to it.
+
 <div align="center">
 
-[![Claude](https://img.shields.io/badge/Made%20with%20a%20lil%20Claude-da7756?style=flat-square&labelColor=da7756&logo=claude&logoColor=white)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+![Claude](https://img.shields.io/badge/Made%20with%20a%20lil%20Claude-da7756?style=flat-square&labelColor=da7756&logo=claude&logoColor=white)
 
 </div>
