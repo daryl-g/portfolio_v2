@@ -67,3 +67,7 @@ Probably any Cyberpunk-themed or Tokyo Night-themed website I can find.
 
 - https://svelte.dev/docs/svelte/getting-started
 - https://svelte.dev/docs/svelte/typescript
+
+---
+
+[![Claude](https://img.shields.io/badge/Made%20with%20a%20lil%20Claude-da7756?style=flat-square&labelColor=da7756&logo=claude&logoColor=white)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
