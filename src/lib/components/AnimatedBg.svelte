@@ -16,13 +16,13 @@
 	/* Change position of the gradient animation */
 	@keyframes gradient {
 		0% {
-			background-position: 100% 100%;
-		}
-		50% {
 			background-position: 100% 0%;
 		}
-		100% {
+		50% {
 			background-position: 100% 100%;
+		}
+		100% {
+			background-position: 100% 0%;
 		}
 	}
 </style>

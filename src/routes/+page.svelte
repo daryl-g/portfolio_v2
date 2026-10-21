@@ -1,21 +1,29 @@
 <script lang="ts">
-	// Anything that requires TypeScript
+	// Flowbite components
+	import { Alert } from 'flowbite-svelte';
+
+	// Lists
+	let greetings: [string, string, string] = ['Hi', 'Hallo', 'Xin chào'];
 </script>
 
 <main class="home-container">
-	<div class="test"></div>
+	<div class="hero">
+		<div class="intro">
+			<div class="greetings">
+				<p>Hi, Hallo, Xin chào!</p>
+			</div>
+			<div class="name">
+				<p>I'm</p>
+				<p>Daryl Dao</p>
+			</div>
+			<div class="description"></div>
+		</div>
+		<div class="small-showcase"></div>
+	</div>
 </main>
 
 <style>
-	.test {
-		color: white;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		height: 100%;
+	.hero {
+		width: 100%;
 	}
-
-	/* h1 {
-		font-size: 4rem;
-	} */
 </style>
