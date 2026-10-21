@@ -1,11 +1,11 @@
 <script lang="ts">
 	// Default imports
 	import './layout.css';
-	import favicon from '$lib/assets/favicon.svg';
+	import favicon from '$lib/assets/favicon.jpg';
 
 	// Custom components imports
 	import AnimatedBg from '$lib/components/AnimatedBg.svelte';
-	import Nav from '$lib/components/Nav.svelte';
+	import Header from '$lib/components/Header.svelte';
 
 	let { children } = $props();
 </script>
@@ -16,8 +16,8 @@
 
 <AnimatedBg />
 
-<div class="app">
-	<Nav />
+<div class="portfolio">
+	<Header />
 
 	<main class="content-container">
 		{@render children()}
@@ -32,17 +32,24 @@
 		overflow: hidden; /* Hide scrolling */
 	}
 
-	.app {
-		width: 100vw;
+	.portfolio {
 		height: 100vh;
 		position: relative;
+		margin-inline: auto;
 	}
 
 	.content-container {
-		width: 100%; /* Use the full width for the container, then adjust the content individually */
+		width: 100%;
 		height: 100%;
-		margin: 0 auto; /* Center horizontally */
+		margin-top: 2.5rem;
 		position: relative;
-		z-index: 1; /* Ensure content is above background */
+		z-index: 1;
+	}
+
+	/* Responsive portfolio width */
+	@media (min-width: 768px) {
+		.portfolio {
+			width: 70vw;
+		}
 	}
 </style>
