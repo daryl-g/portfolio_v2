@@ -1,6 +1,9 @@
 <script lang="ts">
-	// Lists
-	const greetings: [string, string, string] = ['Hi!', 'Hallo!', 'Xin chào!'];
+	// Custom components
+	import TextCarousel from '$lib/components/home/TextCarousel.svelte';
+	import ShowcaseCarousel from '$lib/components/home/ShowcaseCarousel.svelte';
+	import Divider from '$lib/components/Divider.svelte';
+	import OccupationsList from '$lib/components/home/OccupationsList.svelte';
 </script>
 
 <main class="home-container">
@@ -8,86 +11,41 @@
 		<div class="intro">
 			<div class="greetings">
 				<span class="material-symbols-outlined"> waving_hand </span>
-				<div class="carousel" aria-label="Greetings carousel">
-					<div class="greeting-track" aria-hidden="true">
-						{#each [...greetings, greetings[0]] as greeting}
-							<p>{greeting}</p>
-						{/each}
-					</div>
-				</div>
+				<TextCarousel />
 			</div>
 			<div class="description">
 				<p>I enjoy solving problems and questions.</p>
 				<p>I enjoy building solutions and engineering data.</p>
 			</div>
 		</div>
-		<div class="small-showcase"></div>
+		<div class="small-showcase">
+			<ShowcaseCarousel />
+		</div>
 	</div>
+	<Divider />
+	<OccupationsList />
+	<Divider />
 </main>
 
 <style>
 	.hero {
 		width: 100%;
-		display: flex;
 	}
 
 	.intro {
-		width: 50%;
-		margin-top: 6rem;
-		margin-bottom: 6rem;
+		margin-top: 4rem;
+		margin-bottom: 4rem;
 	}
 
 	.greetings {
 		display: flex;
+		user-select: none;
 	}
 
 	.greetings > span {
 		font-size: 5rem;
 		color: #bb9af7;
 		margin-right: 1.2rem;
-	}
-
-	/* Greetings carousel */
-	.carousel {
-		height: 6em;
-		overflow: hidden;
-	}
-
-	.greeting-track p {
-		height: 1.2em;
-		margin: 0;
-		line-height: 1.2em;
-		animation: greeting-carousel 9s infinite;
-		font-family: 'Tilt Neon', sans-serif;
-		color: #bb9af7;
-		font-weight: 500;
-		font-size: 5em;
-	}
-
-	/* Carousel animation */
-	@keyframes greeting-carousel {
-		0%,
-		20% {
-			transform: translateY(0);
-		}
-		25%,
-		45% {
-			transform: translateY(-1.2em);
-		}
-		50%,
-		70% {
-			transform: translateY(-2.4em);
-		}
-		75%,
-		100% {
-			transform: translateY(-3.6em);
-		}
-	}
-
-	@media (prefers-reduced-motion: reduce) {
-		.greeting-track p {
-			animation: none;
-		}
 	}
 
 	/* Description */
@@ -98,11 +56,27 @@
 		font-weight: 500;
 		margin-top: 1rem;
 	}
+	/* Responsive layout */
+	@media (min-width: 768px) {
+		.hero {
+			display: flex;
+		}
 
-	/* Showcase carousel */
-	.small-showcase {
-		width: 50%;
-		margin-top: 6rem;
-		margin-bottom: 6rem;
+		.intro {
+			width: 45%;
+		}
+
+		/* Showcase carousel */
+		.small-showcase {
+			width: 55%;
+			margin-top: 4rem;
+			margin-bottom: 4rem;
+		}
+	}
+	@media (max-width: 767px) {
+		/* Showcase carousel */
+		.small-showcase {
+			margin-bottom: 3rem;
+		}
 	}
 </style>

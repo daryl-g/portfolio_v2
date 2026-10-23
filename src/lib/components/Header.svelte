@@ -1,6 +1,6 @@
 <script lang="ts">
 	// Custom components
-	import Nav from '$lib/components/Nav.svelte';
+	import Nav from '$lib/components/nav/Nav.svelte';
 </script>
 
 <header class="header-content">

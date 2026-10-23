@@ -4,7 +4,6 @@
 	import favicon from '$lib/assets/favicon.jpg';
 
 	// Custom components imports
-	import AnimatedBg from '$lib/components/AnimatedBg.svelte';
 	import Header from '$lib/components/Header.svelte';
 
 	let { children } = $props();
@@ -13,8 +12,6 @@
 <svelte:head>
 	<link rel="icon" href={favicon} />
 </svelte:head>
-
-<AnimatedBg />
 
 <div class="portfolio">
 	<Header />
@@ -27,6 +24,8 @@
 <style>
 	/* Global layout styling */
 	:global(html, body) {
+		background: linear-gradient(180deg, #0a0022, #231050);
+		background-size: 400% 300%;
 		margin: 0;
 		padding: 0;
 		overflow: hidden; /* Hide scrolling */
@@ -50,6 +49,11 @@
 	@media (min-width: 768px) {
 		.portfolio {
 			width: 70vw;
+		}
+	}
+	@media (max-width: 767px) {
+		.portfolio {
+			width: 90vw;
 		}
 	}
 </style>

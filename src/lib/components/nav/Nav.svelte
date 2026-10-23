@@ -1,13 +1,8 @@
-<!-- TypeScript logic for the navigation component -->
 <script lang="ts">
 	import { page } from '$app/state';
 
-	// Check open state of the nav borgor
-	let isOpen = false;
-
-	function toggleMenu() {
-		isOpen = !isOpen;
-	}
+	// Custom component
+	import NavBorgor from './NavBorgor.svelte';
 
 	// Routes
 	const pages = [
@@ -18,7 +13,6 @@
 	];
 </script>
 
-<!-- HTML rendering of the component -->
 <nav class="default-nav">
 	<ul>
 		{#each pages as item}
@@ -35,7 +29,8 @@
 	</ul>
 </nav>
 
-<!-- Styling for the navigation component -->
+<NavBorgor />
+
 <style>
 	/* Desktop nav */
 	.default-nav {
@@ -71,10 +66,15 @@
 		color: #e0af68;
 	}
 
-	/* Responsive query */
+	/* Responsive */
 	@media (min-width: 768px) {
 		.default-nav {
 			display: flex;
+		}
+	}
+	@media (max-width: 767px) {
+		.default-nav {
+			display: none;
 		}
 	}
 </style>
