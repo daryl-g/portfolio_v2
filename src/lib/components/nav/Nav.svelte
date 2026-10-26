@@ -5,12 +5,12 @@
 	import NavBorgor from './NavBorgor.svelte';
 
 	// Routes
-	const pages = [
+	const pages = $state([
 		{ label: 'Work', href: '/work' },
 		{ label: 'Showcase', href: '/showcase' },
 		{ label: 'Contact', href: '/contact' },
 		{ label: 'Archive', href: '/archive' }
-	];
+	]);
 </script>
 
 <nav class="default-nav">

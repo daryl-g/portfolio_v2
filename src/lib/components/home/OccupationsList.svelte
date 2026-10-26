@@ -4,13 +4,13 @@
 		icon: string;
 		title: string;
 		colour: string;
-	}[] = [
+	}[] = $state([
 		{ icon: 'sports_soccer', title: 'Football Analyst', colour: '#ff4499' },
 		{ icon: 'bar_chart', title: 'Data Engineer & Scientist', colour: '#ea7600' },
 		{ icon: 'computer', title: 'Software & Web Developer', colour: '#13dbb7' },
 		{ icon: 'image', title: 'Graphic Designer', colour: '#05e0fc' },
 		{ icon: 'edit', title: 'Blogger', colour: '#c605fc' }
-	];
+	]);
 </script>
 
 <div class="occupation-list">
@@ -26,6 +26,7 @@
 
 <style>
 	/* Occupation list */
+
 	.occupations {
 		justify-content: space-between;
 		margin: 2em 0;
@@ -36,6 +37,7 @@
 		flex-direction: column;
 		align-items: center;
 		text-align: center;
+		user-select: none;
 	}
 
 	.occupations > li > span {

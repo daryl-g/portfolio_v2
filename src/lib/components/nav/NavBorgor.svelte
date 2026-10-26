@@ -1,6 +1,8 @@
 <script lang="ts">
+	import { toggle } from 'flowbite-svelte';
+
 	// Check open state of the nav borgor
-	let isOpen = false;
+	let isOpen = $state(false);
 
 	function toggleMenu() {
 		isOpen = !isOpen;
@@ -8,7 +10,7 @@
 </script>
 
 <nav class="nav-borgor">
-	<button class="borgor-button" aria-label="Toggle navigation" on:click={toggleMenu}>
+	<button class="borgor-button" aria-label="Toggle navigation" onclick={toggleMenu}>
 		<span class="material-symbols-outlined"> menu </span>
 	</button>
 </nav>

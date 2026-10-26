@@ -3,7 +3,7 @@
 	import './layout.css';
 	import favicon from '$lib/assets/favicon.jpg';
 
-	// Custom components imports
+	// Custom component imports
 	import Header from '$lib/components/Header.svelte';
 
 	let { children } = $props();
@@ -25,7 +25,7 @@
 	/* Global layout styling */
 	:global(html, body) {
 		background: linear-gradient(180deg, #0a0022, #231050);
-		background-size: 400% 300%;
+		background-size: 400% 200%;
 		margin: 0;
 		padding: 0;
 		overflow: hidden; /* Hide scrolling */
