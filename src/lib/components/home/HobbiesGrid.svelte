@@ -1,6 +1,24 @@
 <script lang="ts">
 	// List of blog articles
 	import articles from '../../data/articles_list.json';
+	// List of images
+	import images from '../../data/imgs_slideshow.json';
+
+	// Calculate interval between images for the slideshow
+	import { onMount } from 'svelte';
+
+	let currentIndex = $state(0);
+
+	onMount(() => {
+		if (images.length < 2) return;
+
+		// Time interval between images (currently sets at 10s)
+		const intervalId: number = window.setInterval(() => {
+			currentIndex = (currentIndex + 1) % images.length;
+		}, 10000);
+
+		return () => window.clearInterval(intervalId);
+	});
 </script>
 
 <div class="hobbies-grid">
@@ -9,6 +27,8 @@
 			<a
 				class="blog-homepage"
 				href="https://www.talking-tactics.com"
+				target="_blank"
+				rel="noopener noreferrer"
 				aria-label="Talking Tactics logo"
 			>
 				<img
@@ -27,7 +47,13 @@
 		</div>
 		<div class="blog-content">
 			{#each [articles[0]] as article}
-				<a href={article.link} class="latest-article">
+				<a
+					href={article.link}
+					target="_blank"
+					rel="noopener"
+					referrerpolicy="no-referrer-when-downgrade"
+					class="latest-article"
+				>
 					<div class="latest-img">
 						<img src={article.title_img} alt={article.alt_img} />
 					</div>
@@ -70,7 +96,16 @@
 			{/each}
 		</div>
 	</div>
-	<div class="imgs-component"></div>
+	<div class="imgs-component" aria-label="Photo slideshow">
+		{#each images as image, index}
+			<img
+				class:active={index === currentIndex}
+				src={image.link}
+				alt={image.alt}
+				aria-hidden={index !== currentIndex}
+			/>
+		{/each}
+	</div>
 </div>
 
 <style>
@@ -78,6 +113,7 @@
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		margin: 1rem 0;
+		gap: 1rem;
 	}
 
 	/* Styling the blog component like the current interface on Substack */
@@ -229,5 +265,34 @@
 
 	.blog-content > a > .title-img > img {
 		aspect-ratio: 1 / 1;
+	}
+
+	/* Photo slideshow styling */
+	.imgs-component {
+		position: relative;
+		overflow: hidden;
+		aspect-ratio: 4 / 3;
+		height: 100%;
+		border-radius: 20px;
+	}
+
+	.imgs-component img {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		opacity: 0;
+		transition: opacity 700ms ease;
+	}
+
+	.imgs-component img.active {
+		opacity: 1;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.imgs-component img {
+			transition: none;
+		}
 	}
 </style>

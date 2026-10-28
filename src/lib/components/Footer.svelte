@@ -19,7 +19,13 @@
 		</div>
 		<div class="links">
 			{#each links as link}
-				<a href={link.link} aria-label={link.label}>
+				<a
+					href={link.link}
+					aria-label={link.label}
+					target="_blank"
+					rel="noopener"
+					referrerpolicy="no-referrer-when-downgrade"
+				>
 					<i class="fa-{link.pack} fa-{link.icon}"></i>
 				</a>
 			{/each}
