@@ -28,7 +28,6 @@
 		background-size: 400% 200%;
 		margin: 0;
 		padding: 0;
-		overflow: hidden; /* Hide scrolling */
 	}
 
 	.portfolio {

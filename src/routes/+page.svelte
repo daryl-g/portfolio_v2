@@ -1,9 +1,8 @@
 <script lang="ts">
 	// Custom components
 	import TextCarousel from '$lib/components/home/TextCarousel.svelte';
-	import ShowcaseCarousel from '$lib/components/home/ShowcaseCarousel.svelte';
+	import ShowcaseGrid from '$lib/components/home/ShowcaseGrid.svelte';
 	import Divider from '$lib/components/Divider.svelte';
-	import OccupationsList from '$lib/components/home/OccupationsList.svelte';
 </script>
 
 <main class="home-container">
@@ -18,12 +17,9 @@
 				<p>I enjoy building solutions and engineering data.</p>
 			</div>
 		</div>
-		<div class="small-showcase">
-			<ShowcaseCarousel />
-		</div>
 	</div>
 	<Divider />
-	<OccupationsList />
+	<ShowcaseGrid />
 	<Divider />
 </main>
 
@@ -64,19 +60,6 @@
 
 		.intro {
 			width: 45%;
-		}
-
-		/* Showcase carousel */
-		.small-showcase {
-			width: 55%;
-			margin-top: 4rem;
-			margin-bottom: 4rem;
-		}
-	}
-	@media (max-width: 767px) {
-		/* Showcase carousel */
-		.small-showcase {
-			margin-bottom: 3rem;
 		}
 	}
 </style>
