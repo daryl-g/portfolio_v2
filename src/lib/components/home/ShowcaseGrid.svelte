@@ -23,14 +23,10 @@
 <style>
 	.showcase-grid {
 		display: grid;
-		grid-template-columns: 1.5fr 2fr;
-		grid-template-rows: repeat(3, auto);
+		grid-template-columns: 2fr 1.5fr;
+		grid-template-rows: repeat(2, auto);
 		gap: 1rem;
-		margin-top: 1rem;
-	}
-
-	.showcase-grid > div:nth-child(5) {
-		grid-column: 1 / -1;
+		margin: 1.5rem 0;
 	}
 
 	/* Title overlay */
@@ -67,6 +63,16 @@
 		object-fit: cover;
 		object-position: center;
 		border-radius: inherit;
+	}
+
+	.showcase-grid span {
+		font-size: 5rem;
+	}
+
+	.showcase-grid p {
+		font-family: 'Source Serif 4', sans-serif;
+		font-size: 2rem;
+		font-weight: 500;
 	}
 
 	/* Only displays on hover */

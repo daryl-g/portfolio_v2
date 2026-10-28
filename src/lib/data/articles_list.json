@@ -1,0 +1,26 @@
+[
+	{
+		"title_img": "https://substackcdn.com/image/fetch/$s_!hxSY!,w_1250,h_703,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_center/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3755f337-71e7-4e22-8f59-cf52853c3b67_1760x1320.png",
+		"alt_img": "4-2-3-1 formation from top down view with positional movements.",
+		"title": "Explaining the latest 3-2-5/W-M adaptation in FM26",
+		"desc": "Using my own tactical and data knowledge, I'm on a short journey to find solutions to one of the most commonly-used tactics in Football Manager 26",
+		"date": "Oct 20",
+		"link": "https://www.talking-tactics.com/p/football-manager-26-tactics-decode-analysis"
+	},
+	{
+		"title_img": "https://substackcdn.com/image/fetch/$s_!m120!,w_450,h_450,c_fill,f_webp,q_auto:good,fl_progressive:steep,g_center/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff989dc9d-5eba-4775-b81d-a0c263b1ea40_982x557.png",
+		"alt_img": "A tweet from Twitter/X indicating that it is possible to use AI to generate football tracking data.",
+		"title": "Football analytics is the latest tech bubble",
+		"desc": "Not the next one because it's already here",
+		"date": "Sep 9",
+		"link": "https://www.talking-tactics.com/p/solving-football-analytics-with-ai-and-computer-vision"
+	},
+	{
+		"title_img": "https://substackcdn.com/image/fetch/$s_!Od5G!,w_450,h_450,c_fill,f_webp,q_auto:good,fl_progressive:steep,g_center/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F23f0b869-4fb2-4813-90f7-d9e64778b7dc_1859x975.png",
+		"alt_img": "Homepage of the currently in-developed Match Analysis Tool.",
+		"title": "Why I switch from Streamlit to Svelte for my project",
+		"desc": "It's the return of the Dev Logs for my self-developed Match Analysis Tool!",
+		"date": "Aug 27",
+		"link": "https://www.talking-tactics.com/p/mat-dev-logs-part-1-streamlit-to-svelte-typescript"
+	}
+]

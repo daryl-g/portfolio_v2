@@ -1,9 +1,9 @@
 <script lang="ts">
 	// Adjustable variables
 	let {
-		startColor = '#0a0022cc',
+		startColor = '#0a002200',
 		middleColor = '#00ffd2',
-		endColor = '#0a0022cc',
+		endColor = '#0a002200',
 		thickness = '2px'
 	}: {
 		startColor?: string;

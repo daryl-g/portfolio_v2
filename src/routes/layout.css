@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 
+@import '@fortawesome/fontawesome-free/css/all.css';
 @import '../../node_modules/flowbite/src/themes/default.css';
 @plugin 'flowbite/plugin';
 @custom-variant dark (&:where(.dark, .dark *));

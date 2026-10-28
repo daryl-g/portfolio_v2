@@ -34,14 +34,5 @@
 		"title": "Graphic Designer",
 		"colour": "#05e0fc",
 		"tag": "graphic-design"
-	},
-	{
-		"alt": "Home page of my own blog Talking Tactics, depicting 5 latest articles and 4 most popular articles.",
-		"src": "https://dgouilard5.wordpress.com/wp-content/uploads/2026/10/screenshot_20261023_150715-region.png",
-		"img_title": "Talking-Tactics-Homepage",
-		"icon": "edit",
-		"title": "Blogger",
-		"colour": "#c605fc",
-		"tag": "blogging"
 	}
 ]

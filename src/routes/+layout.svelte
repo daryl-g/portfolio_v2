@@ -24,6 +24,7 @@
 <style>
 	/* Global layout styling */
 	:global(html, body) {
+		min-height: 100vh;
 		background: linear-gradient(180deg, #0a0022, #231050);
 		background-size: 400% 200%;
 		margin: 0;
@@ -32,16 +33,32 @@
 
 	.portfolio {
 		height: 100vh;
+		display: flex;
+		flex-direction: column;
 		position: relative;
+		overflow: hidden;
 		margin-inline: auto;
 	}
 
 	.content-container {
 		width: 100%;
-		height: 100%;
+		flex: 1;
+		min-height: 0;
+		overflow-y: auto;
 		margin-top: 2.5rem;
 		position: relative;
 		z-index: 1;
+	}
+
+	/* Hide scrollbar */
+	.content-container::-webkit-scrollbar {
+		width: 0px;
+		background: transparent;
+	}
+
+	.content-container {
+		scrollbar-width: none;
+		-ms-overflow-style: none;
 	}
 
 	/* Responsive portfolio width */

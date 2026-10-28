@@ -2,10 +2,12 @@
 	// Custom components
 	import TextCarousel from '$lib/components/home/TextCarousel.svelte';
 	import ShowcaseGrid from '$lib/components/home/ShowcaseGrid.svelte';
+	import HobbiesGrid from '$lib/components/home/HobbiesGrid.svelte';
 	import Divider from '$lib/components/Divider.svelte';
+	import Footer from '$lib/components/Footer.svelte';
 </script>
 
-<main class="home-container">
+<div class="home-container">
 	<div class="hero">
 		<div class="intro">
 			<div class="greetings">
@@ -18,10 +20,12 @@
 			</div>
 		</div>
 	</div>
-	<Divider />
+	<Divider thickness={'1px'} />
 	<ShowcaseGrid />
-	<Divider />
-</main>
+	<Divider thickness={'1px'} />
+	<HobbiesGrid />
+	<Footer />
+</div>
 
 <style>
 	.hero {
@@ -56,10 +60,6 @@
 	@media (min-width: 768px) {
 		.hero {
 			display: flex;
-		}
-
-		.intro {
-			width: 45%;
 		}
 	}
 </style>

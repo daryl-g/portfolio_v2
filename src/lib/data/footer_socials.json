@@ -1,0 +1,32 @@
+[
+	{
+		"pack": "solid",
+		"icon": "briefcase",
+		"label": "CV",
+		"link": "https://dgouilard5.wordpress.com/wp-content/uploads/2026/10/hoang-thai-dao-resume.pdf"
+	},
+	{
+		"pack": "solid",
+		"icon": "envelope",
+		"label": "Email",
+		"link": "mailto:Daryl Dao<daohoang.thai@gmail.com>?subject=Connect with you!"
+	},
+	{
+		"pack": "brands",
+		"icon": "bluesky",
+		"label": "Bluesky",
+		"link": "https://bsky.app/profile/daryldao.com"
+	},
+	{
+		"pack": "brands",
+		"icon": "linkedin",
+		"label": "LinkedIn",
+		"link": "https://www.linkedin.com/in/daryl-thai-dao/"
+	},
+	{
+		"pack": "brands",
+		"icon": "github",
+		"label": "GitHub",
+		"link": "https://github.com/daryl-g"
+	}
+]
