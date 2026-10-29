@@ -69,7 +69,7 @@
 		margin: 1rem 0;
 		padding: 0.3rem 0.7rem;
 		user-select: none;
-		background-color: #9ece6a;
+		background-color: #90ee90;
 		border-radius: 20px;
 	}
 

@@ -2,24 +2,13 @@
 	// Custom components
 	import Footer from '$lib/components/Footer.svelte';
 	import Discord from '$lib/components/contact/Discord.svelte';
+	import Mail from '$lib/components/contact/Mail.svelte';
 </script>
 
 <div class="contact-content">
 	<div class="contact-grid">
 		<Discord />
-		<div class="contact-email">
-			<a
-				href="mailto:Daryl Dao<daohoang.thai@gmail.com>?subject=Connect with you!"
-				target="_blank"
-				rel="noopener noreferrer"
-				referrerpolicy="no-referrer-when-downgrade"
-			>
-				<button type="button">
-					<p>Let's chat!</p>
-					<span class="material-symbols-outlined">arrow_outward</span>
-				</button>
-			</a>
-		</div>
+		<Mail />
 		<div class="contact-bluesky">
 			<a
 				href="https://bsky.app/profile/daryldao.com"
@@ -63,7 +52,6 @@
 		margin-inline: auto;
 	}
 
-	.contact-email,
 	.contact-bluesky {
 		border-radius: inherit;
 	}
