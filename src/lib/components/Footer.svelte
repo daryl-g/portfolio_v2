@@ -1,4 +1,8 @@
 <script lang="ts">
+	// Take option to display social links
+	let { displayLinks = true }: { displayLinks?: boolean } = $props();
+	let isLinks: string = $derived(displayLinks ? 'flex' : 'none');
+
 	// Custom component
 	import Divider from './Divider.svelte';
 
@@ -17,7 +21,7 @@
 				<p>Made with ❤️ and a lot of electronic music. Like...a lot.</p>
 			</div>
 		</div>
-		<div class="links">
+		<div class="links" style={`display: ${isLinks}`}>
 			{#each links as link}
 				<a
 					href={link.link}
