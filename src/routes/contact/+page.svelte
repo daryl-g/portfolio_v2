@@ -1,2 +1,23 @@
-<h1>Contact</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script lang="ts">
+	// Custom components
+	import Footer from '$lib/components/Footer.svelte';
+</script>
+
+<div class="contact-content">
+	<div class="contact-grid"></div>
+	<Footer />
+</div>
+
+<style>
+	.contact-content {
+		height: 100vh;
+	}
+
+	/* Responsive layout */
+	@media (min-width: 768px) {
+		.contact-content {
+			width: 80vw;
+			margin-inline: auto;
+		}
+	}
+</style>

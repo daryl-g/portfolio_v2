@@ -4,21 +4,8 @@
 	// List of images
 	import images from '../../data/imgs_slideshow.json';
 
-	// Calculate interval between images for the slideshow
-	import { onMount } from 'svelte';
-
-	let currentIndex = $state(0);
-
-	onMount(() => {
-		if (images.length < 2) return;
-
-		// Time interval between images (currently sets at 10s)
-		const intervalId: number = window.setInterval(() => {
-			currentIndex = (currentIndex + 1) % images.length;
-		}, 10000);
-
-		return () => window.clearInterval(intervalId);
-	});
+	// Custom component
+	import Slideshow from '../Slideshow.svelte';
 </script>
 
 <div class="hobbies-grid">
@@ -95,17 +82,16 @@
 				</div>
 			{/each}
 		</div>
+		<div class="more-blogs">
+			<a class="view-more" href="/showcase/blogging" aria-label="View more articles button">
+				<button type="button">
+					<p>View more</p>
+					<span class="material-symbols-outlined">arrow_drop_down</span>
+				</button>
+			</a>
+		</div>
 	</div>
-	<div class="imgs-component" aria-label="Photo slideshow">
-		{#each images as image, index}
-			<img
-				class:active={index === currentIndex}
-				src={image.link}
-				alt={image.alt}
-				aria-hidden={index !== currentIndex}
-			/>
-		{/each}
-	</div>
+	<Slideshow {images} ariaLabel={'Photo slideshow'} aspectRatio={'4 / 3'} interval={10000} />
 </div>
 
 <style>
@@ -132,7 +118,12 @@
 		border-top-right-radius: 20px;
 	}
 
-	.blog-header > .blog-subscribe {
+	.blog-homepage {
+		margin-top: 0.2rem;
+	}
+
+	.blog-header > .blog-subscribe,
+	.more-blogs {
 		background-color: #90ee90;
 		color: #363737;
 		font-size: 0.8rem;
@@ -141,8 +132,27 @@
 		border-radius: 5px;
 	}
 
-	.blog-header button {
+	.blog-header button,
+	.more-blogs button {
 		cursor: pointer;
+	}
+
+	/* View more button styling */
+	.more-blogs {
+		display: flex;
+		width: fit-content;
+		margin-inline: auto;
+		margin-top: 0.5rem;
+	}
+
+	.more-blogs button {
+		display: inline-flex;
+		flex-direction: row;
+	}
+
+	.more-blogs p {
+		padding-top: 0.2rem;
+		padding-left: 0.2rem;
 	}
 
 	/* Divider styling */
@@ -265,34 +275,5 @@
 
 	.blog-content > a > .title-img > img {
 		aspect-ratio: 1 / 1;
-	}
-
-	/* Photo slideshow styling */
-	.imgs-component {
-		position: relative;
-		overflow: hidden;
-		aspect-ratio: 4 / 3;
-		height: 100%;
-		border-radius: 20px;
-	}
-
-	.imgs-component img {
-		position: absolute;
-		inset: 0;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		opacity: 0;
-		transition: opacity 700ms ease;
-	}
-
-	.imgs-component img.active {
-		opacity: 1;
-	}
-
-	@media (prefers-reduced-motion: reduce) {
-		.imgs-component img {
-			transition: none;
-		}
 	}
 </style>

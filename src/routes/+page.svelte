@@ -21,8 +21,14 @@
 		</div>
 	</div>
 	<Divider thickness={'1px'} />
+	<div class="section-title">
+		<p>Contributions</p>
+	</div>
 	<ShowcaseGrid />
 	<Divider thickness={'1px'} />
+	<div class="section-title">
+		<p>Hobbies</p>
+	</div>
 	<HobbiesGrid />
 	<Footer />
 </div>
@@ -56,8 +62,30 @@
 		font-weight: 500;
 		margin-top: 1rem;
 	}
+
+	/* Section title */
+	.section-title {
+		width: fit-content;
+		margin: 1rem 0;
+		padding: 0.3rem 0.7rem;
+		user-select: none;
+		background-color: #9ece6a;
+		border-radius: 20px;
+	}
+
+	.section-title p {
+		color: #1a1b26;
+		font-family: 'Source Code Pro', sans-serif;
+		font-weight: 500;
+		font-size: 1.2rem;
+	}
+
 	/* Responsive layout */
 	@media (min-width: 768px) {
+		.home-container {
+			width: 80vw;
+			margin-inline: auto;
+		}
 		.hero {
 			display: flex;
 		}
