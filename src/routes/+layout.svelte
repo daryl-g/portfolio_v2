@@ -25,6 +25,7 @@
 		min-height: 100vh;
 		background: linear-gradient(45deg, #0a0022, #1a163a);
 		background-size: 200% 100%;
+		font-family: 'Noto Sans', 'Open Sans', sans-serif;
 		margin: 0;
 		padding: 0;
 	}
