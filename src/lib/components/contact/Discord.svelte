@@ -49,7 +49,6 @@
 		flex-direction: column;
 		min-height: 2.75rem;
 		padding: 1rem;
-		margin-top: 1.0625rem;
 		background: linear-gradient(45deg, #19153c, #04010a);
 		border-radius: inherit;
 		word-wrap: break-word;
