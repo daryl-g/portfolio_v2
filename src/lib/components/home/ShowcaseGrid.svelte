@@ -23,7 +23,7 @@
 <style>
 	.showcase-grid {
 		display: grid;
-		grid-template-columns: 2fr 1.5fr;
+		grid-template-columns: 1fr 1fr;
 		grid-template-rows: repeat(2, auto);
 		gap: 1rem;
 		margin: 1.5rem 0;
