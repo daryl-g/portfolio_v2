@@ -6,6 +6,10 @@
 	// Custom component imports
 	import Header from '$lib/components/Header.svelte';
 
+	// Transitions
+	import { fly } from 'svelte/transition';
+	import { page } from '$app/state';
+
 	let { children } = $props();
 </script>
 
@@ -16,7 +20,15 @@
 <main class="portfolio">
 	<Header />
 
-	{@render children()}
+	{#key page.url.pathname || page.url.href}
+		<div
+			class="page-transition"
+			in:fly={{ x: 32, duration: 300 }}
+			out:fly={{ x: -32, duration: 180 }}
+		>
+			{@render children()}
+		</div>
+	{/key}
 </main>
 
 <style>
