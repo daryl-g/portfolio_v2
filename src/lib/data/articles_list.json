@@ -22,5 +22,21 @@
 		"desc": "It's the return of the Dev Logs for my self-developed Match Analysis Tool!",
 		"date": "Aug 27",
 		"link": "https://www.talking-tactics.com/p/mat-dev-logs-part-1-streamlit-to-svelte-typescript"
+	},
+	{
+		"title_img": "https://substackcdn.com/image/fetch/$s_!vP_e!,w_150,h_150,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_center/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F82f29751-3bb0-40bd-8eaa-7691b78d37e9_1265x711.jpeg",
+		"alt_img": "Indonesian striker Mitchell Baker celebrating after scoring a goal at the 2026 ASEAN Championship group stage.",
+		"title": "One question for each ASEAN team in 2026: Group A",
+		"desc": "After the conclusion of the 2026 Battle of the SEAblings group stage, what is one lingering question that each Group A team are trying to find an answer for?",
+		"date": "Aug 9",
+		"link": "https://www.talking-tactics.com/p/2026-asean-championship-indonesia-singapore-vietnam-data-analysis-tactical-analysis"
+	},
+	{
+		"title_img": "https://substackcdn.com/image/fetch/$s_!6pZZ!,w_150,h_150,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_center/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F143fd33c-036b-475c-a5f1-e964c8e0ec64_1600x900.jpeg",
+		"alt_img": "Guus Til being unveiled as SC Freiburg's new player before the 2020-21 Bundesliga season started.",
+		"title": "Down the Memory Lane with 38-0-0: Bundesliga version",
+		"desc": "Something very random as I reminisce about past Bundesliga teams and players while I build a fantasy team to win all 38 (technically 34) matches.",
+		"date": "Jul 16",
+		"link": "https://www.talking-tactics.com/p/down-the-memory-lane-bundesliga-version-mainz-05-hertha-berlin-freiburg"
 	}
 ]

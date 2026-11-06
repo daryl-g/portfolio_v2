@@ -18,7 +18,7 @@
 		display: flex;
 		position: relative;
 		top: 1.5rem;
-		width: 80vw;
+		width: 60vw;
 		margin-inline: auto;
 		z-index: 1;
 	}

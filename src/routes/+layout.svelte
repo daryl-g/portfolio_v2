@@ -22,8 +22,8 @@
 <style>
 	/* Global layout styling */
 	:global(html, body) {
-		min-height: 100vh;
-		background: linear-gradient(45deg, #0a0022, #1a163a);
+		height: 100vh;
+		background: linear-gradient(45deg, #0a0022 0%, #1a163a 70%);
 		background-size: 200% 100%;
 		font-family: 'Noto Sans', 'Open Sans', sans-serif;
 		margin: 0;
@@ -31,8 +31,8 @@
 	}
 
 	.portfolio {
-		height: 100vh;
-		min-height: 0;
+		height: 99vh;
+		max-height: 99vh;
 		display: flex;
 		flex-direction: column;
 		position: relative;

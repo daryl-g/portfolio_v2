@@ -1,109 +1,100 @@
 <script lang="ts">
 	// List of blog articles
 	import articles from '../../data/articles_list.json';
-	// List of images
-	import images from '../../data/imgs_slideshow.json';
-
-	// Custom component
-	import Slideshow from '../Slideshow.svelte';
 </script>
 
-<div class="hobbies-grid">
-	<div class="blog-component">
-		<div class="blog-header">
+<div class="blog-component">
+	<div class="blog-header">
+		<a
+			class="blog-homepage"
+			href="https://www.talking-tactics.com"
+			target="_blank"
+			rel="noopener noreferrer"
+			aria-label="Talking Tactics logo"
+		>
+			<img
+				src="https://substackcdn.com/image/fetch/$s_!I5H7!,e_trim:10:white/e_trim:10:transparent/h_40,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6f01cb50-e81b-42e9-8953-26efabeb0a0f_1000x261.png"
+				alt="Talking Tactics logo"
+				style="max-height:20px;"
+			/>
+		</a>
+		<a
+			class="blog-subscribe"
+			href="https://www.talking-tactics.com/subscribe?utm_source=menu&simple=true&next=https%3A%2F%2Fwww.talking-tactics.com%2F"
+			aria-label="Blog subscribe button"
+		>
+			<button type="button">Subscribe</button>
+		</a>
+	</div>
+	<div class="blog-content">
+		{#each [articles[0]] as article}
 			<a
-				class="blog-homepage"
-				href="https://www.talking-tactics.com"
+				href={article.link}
 				target="_blank"
-				rel="noopener noreferrer"
-				aria-label="Talking Tactics logo"
+				rel="noopener"
+				referrerpolicy="no-referrer-when-downgrade"
+				class="latest-article"
 			>
-				<img
-					src="https://substackcdn.com/image/fetch/$s_!I5H7!,e_trim:10:white/e_trim:10:transparent/h_40,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6f01cb50-e81b-42e9-8953-26efabeb0a0f_1000x261.png"
-					alt="Talking Tactics logo"
-					style="max-height:20px;"
-				/>
+				<div class="latest-img">
+					<img src={article.title_img} alt={article.alt_img} />
+				</div>
+				<div class="latest-info">
+					<div class="latest-title">
+						<h1>{article.title}</h1>
+					</div>
+					<div class="latest-description">
+						<p>{article.desc}</p>
+					</div>
+					<div class="latest-published-date">
+						<p>{article.date}</p>
+					</div>
+				</div>
 			</a>
-			<a
-				class="blog-subscribe"
-				href="https://www.talking-tactics.com/subscribe?utm_source=menu&simple=true&next=https%3A%2F%2Fwww.talking-tactics.com%2F"
-				aria-label="Blog subscribe button"
-			>
-				<button type="button">Subscribe</button>
-			</a>
+		{/each}
+		<div class="article-divider">
+			<hr class="divider" />
 		</div>
-		<div class="blog-content">
-			{#each [articles[0]] as article}
-				<a
-					href={article.link}
-					target="_blank"
-					rel="noopener"
-					referrerpolicy="no-referrer-when-downgrade"
-					class="latest-article"
-				>
-					<div class="latest-img">
-						<img src={article.title_img} alt={article.alt_img} />
+		<div class="article-list">
+			{#each articles.slice(1) as article}
+				<div class="article-item">
+					<a href={article.link} class="articles">
+						<div class="titles">
+							<div class="title">
+								<h1>{article.title}</h1>
+							</div>
+							<div class="description">
+								<p>{article.desc}</p>
+							</div>
+							<div class="published-date">
+								<p>{article.date}</p>
+							</div>
+						</div>
+						<div class="title-img">
+							<img src={article.title_img} alt={article.alt_img} width={150} height={150} />
+						</div>
+					</a>
+					<div class="article-divider">
+						<hr class="divider" />
 					</div>
-					<div class="latest-info">
-						<div class="latest-title">
-							<h1>{article.title}</h1>
-						</div>
-						<div class="latest-description">
-							<p>{article.desc}</p>
-						</div>
-						<div class="latest-published-date">
-							<p>{article.date}</p>
-						</div>
-					</div>
-				</a>
-			{/each}
-			<div class="article-divider">
-				<hr class="divider" />
-			</div>
-			{#each [articles[1], articles[2]] as article}
-				<a href={article.link} class="articles">
-					<div class="titles">
-						<div class="title">
-							<h1>{article.title}</h1>
-						</div>
-						<div class="description">
-							<p>{article.desc}</p>
-						</div>
-						<div class="published-date">
-							<p>{article.date}</p>
-						</div>
-					</div>
-					<div class="title-img">
-						<img src={article.title_img} alt={article.alt_img} width={150} height={150} />
-					</div>
-				</a>
-				<div class="article-divider">
-					<hr class="divider" />
 				</div>
 			{/each}
 		</div>
-		<div class="more-blogs">
-			<a class="view-more" href="/showcase/blogging" aria-label="View more articles button">
-				<button type="button">
-					<p>View more</p>
-					<span class="material-symbols-outlined">arrow_drop_down</span>
-				</button>
-			</a>
-		</div>
 	</div>
-	<Slideshow {images} ariaLabel={'Photo slideshow'} aspectRatio={'4 / 3'} interval={10000} />
+	<div class="more-blogs">
+		<a class="view-more" href="/showcase/blogging" aria-label="View more articles button">
+			<button type="button">
+				<p>View more</p>
+				<span class="material-symbols-outlined">arrow_drop_down</span>
+			</button>
+		</a>
+	</div>
 </div>
 
 <style>
-	.hobbies-grid {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		margin: 1rem 0;
-		gap: 1rem;
-	}
-
 	/* Styling the blog component like the current interface on Substack */
 	.blog-component {
+		width: 100%;
+		height: 100%;
 		background-color: rgb(8, 8, 34);
 		border-radius: 20px;
 	}
@@ -253,6 +244,14 @@
 	}
 
 	/* Other articles styling */
+	.blog-content {
+		container-type: inline-size;
+	}
+
+	.article-item:nth-child(n + 4) {
+		display: none;
+	}
+
 	.articles {
 		margin-top: 0.5rem;
 	}
@@ -282,7 +281,7 @@
 		overflow: hidden;
 	}
 
-	.blog-content > a > .title-img > img {
+	.blog-content > .article-list > .article-item > a > .title-img > img {
 		aspect-ratio: 1 / 1;
 	}
 </style>

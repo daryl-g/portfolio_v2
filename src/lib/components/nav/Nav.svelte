@@ -35,9 +35,9 @@
 	/* Desktop nav */
 	.default-nav {
 		width: 50%;
+		justify-content: center;
 		margin-left: auto;
-		text-align: right;
-		justify-content: flex-end;
+		margin-right: auto;
 	}
 
 	.default-nav ul {
