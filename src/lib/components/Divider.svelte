@@ -25,9 +25,9 @@
 	.divider {
 		background: linear-gradient(
 			90deg,
-			var(--gradient-start),
-			var(--gradient-middle),
-			var(--gradient-end)
+			var(--gradient-start) 4%,
+			var(--gradient-middle) 50%,
+			var(--gradient-end) 96%
 		);
 		height: var(--divider-thickness);
 		border: 0;

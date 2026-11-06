@@ -108,6 +108,15 @@
 		border-radius: 20px;
 	}
 
+	.blog-component p {
+		font-family:
+			system-ui,
+			-apple-system,
+			Roboto,
+			'Open Sans',
+			sans-serif;
+	}
+
 	/* Header styling */
 	.blog-header {
 		background-color: #0a0047;

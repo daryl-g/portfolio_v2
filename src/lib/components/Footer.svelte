@@ -42,6 +42,8 @@
 		margin: 2rem 0;
 		display: flex;
 		justify-content: space-between;
+		width: 80vw;
+		margin-inline: auto;
 	}
 
 	.sub-credits {

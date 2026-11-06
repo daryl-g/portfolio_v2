@@ -31,7 +31,6 @@
 	}
 
 	.portfolio {
-		width: 90vw;
 		height: 100vh;
 		min-height: 0;
 		display: flex;
