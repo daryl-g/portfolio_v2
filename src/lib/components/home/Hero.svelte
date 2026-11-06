@@ -108,15 +108,15 @@
 	}
 
 	.football-analysis-showcase-component::before {
-		background: radial-gradient(ellipse, #ff4499 100%);
+		background: radial-gradient(ellipse, #ff449999 100%);
 	}
 
 	.data-science-showcase-component::before {
-		background: radial-gradient(ellipse, #ea7600 100%);
+		background: radial-gradient(ellipse, #ea760099 100%);
 	}
 
 	.graphic-design-showcase-component::before {
-		background: radial-gradient(ellipse, #05e0fc 100%);
+		background: radial-gradient(ellipse, #05e0fc99 100%);
 	}
 
 	/* Intro section styling */
