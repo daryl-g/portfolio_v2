@@ -1,17 +1,17 @@
 [
 	{
-		"alt": "Announcement image by Stats Perform posted on their social media platforms for my Opta Forum 2023 proposal.",
+		"alt": "A collection of my analysis videos, including an analysis of how Juventus' centre-backs recover position and Japan women's national team's third goal against Australia women's national team.",
 		"src": "https://dgouilard5.wordpress.com/wp-content/uploads/2026/11/untitled.gif",
-		"img_title": "Opta-Forum-2023-Poster",
+		"img_title": "Video-Analysis-Collection",
 		"icon": "sports_soccer",
 		"title": "Football Analyst",
 		"colour": "#ff4499",
 		"tag": "football-analysis"
 	},
 	{
-		"alt": "Homepage of the A-League Women Recruitment Dashboard depicting three light, dark, and Tokyo Night themes.",
-		"src": "https://dgouilard5.wordpress.com/wp-content/uploads/2025/10/bafkreifpqbcyunvikvt362avddzokygllpb2ouuo2qkyahlemn6xmqb73y.jpg",
-		"img_title": "A-League-Women-Recruitment-Dashboard-Home",
+		"alt": "A demo of my self-developed Match Analysis Tool dashboard, developed using Python and Streamlit, showcasing the home page, data loading page, and match report page with different visualisations.",
+		"src": "https://dgouilard5.wordpress.com/wp-content/uploads/2026/11/mat-demo.gif",
+		"img_title": "Match-Analysis-Tool-Dashboard-Home",
 		"icon": "bar_chart",
 		"title": "Data Engineer & Scientist",
 		"colour": "#ea7600",
